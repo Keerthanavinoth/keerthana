@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="C:\Users\Anu\Desktop\test\styles.css">
+ <title>Keerthana - Portfolio</title>
+</head>
+<body bgcolor="yellow">
+ <header>
+ <div class="logo">
+ <img src="C:\Users\Anu\Desktop\test\images.jpg" alt="College Logo">
+ </div>
+ <h1>Keerthana</h1>
+ </header>
+ <main>
+ <section class="personal-info">
+ <h2>Personal Information</h2>
+ <p>Name: Keerthana</p>
+ <p>Email: keerthana@gmail.com</p>
+ <p>Location: Thuckalay, TamilNadu</p>
+ <label for="yearob">Year Of Birth:</label>
+ <input type="date" id="txtDOB" /> 
+ <button id="btnCalculate" onclick="fnCalculateAge();" >Calculate 
+Age</button> 
+ <script>
+ function fnCalculateAge(){
+ var userDateinput = document.getElementById("txtDOB").value; 
+ console.log(userDateinput);
+ // convert user input value into date object
+ var birthDate = new Date(userDateinput);
+ console.log(" birthDate"+ birthDate);
+ // get difference from current date;
+ var difference=Date.now() - birthDate.getTime(); 
+ var ageDate = new Date(difference); 
+ var calculatedAge= Math.abs(ageDate.getUTCFullYear() - 1970);
+ alert(calculatedAge); 
+ }
+ </script>
+ </section>
+ <section class="education-info">
+ <h2>Educational Details</h2>
+ <p>College: Pioneer Kumaraswamy College</p>
+ <p>Program: B.Sc Computer Science</p>
+ <p>Graduation Year: 2018</p>
+ </section>
+ </main>
+ </html>
